@@ -8,7 +8,7 @@ This project is created as part of my fifth and final project for a Diploma in S
 
 <h2 style="text-align: center;"><img src="https://i.ibb.co/TYvTXz1/Example-CI.png"></h2>
 
-# **_Table of Contents_**
+# **Table of Contents**
 
 - [**_User Experience_**](#user-experience-ux)
 
