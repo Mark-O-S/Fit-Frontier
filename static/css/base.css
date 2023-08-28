@@ -24,19 +24,6 @@ body {
   width: fit-content;
 }
 
-.btn-black {
-  background: black;
-  color: white;
-}
-
-.text-black {
-  color: #000 !important;
-}
-
-.border-black {
-  border: 1px solid black !important;
-}
-
 /* Home Page & Hero Image */
 
 .homepage-hero {
@@ -71,7 +58,7 @@ body {
 /* Custom Buttons */
 
 .btn {
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 .btn-blue {
@@ -79,7 +66,7 @@ body {
   color: #000;
   font-weight: bold;
   border: none;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 .btn-blue:hover,
@@ -87,4 +74,22 @@ body {
 .btn-blue:focus {
   background-color: #019bc6;
   color: #fff;
+}
+
+/* Custom colors */
+
+.text-black {
+  color: #000 !important;
+}
+
+.border-black {
+  border: 1px solid #000;
+}
+
+.border-blue {
+  border: 1px solid #1fb8e3;
+}
+
+.bg-orange {
+  background-color: #e65a3a;
 }
