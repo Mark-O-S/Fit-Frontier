@@ -3,12 +3,8 @@ html {
 }
 
 body {
-  background: url("/media/home_page_fit_frontier_img.jpg") no-repeat center
-    center fixed;
-  background-size: cover;
-  height: calc(100vh - 164px);
-  color: #555;
-  font-family: "rubik", sans-serif;
+  font-family: "Rubik", sans-serif;
+  background-color: #f6f1f1;
 }
 
 /* from Bulma */
@@ -28,24 +24,8 @@ body {
   width: fit-content;
 }
 
-.shop-now-button {
-  background: black;
-  color: white;
-  min-width: 260px;
-}
-
 .btn-black {
   background: black;
-  color: white;
-}
-
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-  background: #222;
   color: white;
 }
 
@@ -57,26 +37,54 @@ body {
   border: 1px solid black !important;
 }
 
-/* -------------------------------- Media Queries */
+/* Home Page & Hero Image */
 
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
+.homepage-hero {
+  background: url("/media/cropped-home-page-fit-frontier-img.jpg") no-repeat
+    center top fixed;
 }
 
-/* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
-  .fixed-top-desktop-only {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
-  }
+.hero-container {
+  height: 75vh;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+}
 
-  .header-container {
-    padding-top: 164px;
-  }
+.opaque-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.jumbotron {
+  background-color: transparent;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+/* Custom Buttons */
+
+.btn {
+  font-size: 1.3rem;
+}
+
+.btn-blue {
+  background-color: #1fb8e3;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  font-size: 1.3rem;
+}
+
+.btn-blue:hover,
+.btn-blue:active,
+.btn-blue:focus {
+  background-color: #019bc6;
+  color: #fff;
 }
