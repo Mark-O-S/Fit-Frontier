@@ -156,6 +156,7 @@
     {% block content %}
     {% endblock %}
 
+
     <!-- Footer Section -->
     <footer class="container-wrapper">
         <div class="container quotes-container content-container">
@@ -164,21 +165,16 @@
                     <div class="col-12 page-header mb-4">
                         <h2 class="text-uppercase text-center text-bold">keep up to date</h2>
                         <hr class="block-divider block-divider--short">
-                        </hr>
                     </div>
                 </div>
-                <div class="row">
-                    <!-- Social Links -->
-                    <div class="col-12 col-md-6">
-                        <h3>Follow us on</h3>
-                        <!-- This link below will contain link to Fit Frontier Facebook/Meta page -->
-                        <a href="#" target="_blank"><i class="fa-brands fa-facebook"> Follow us on facebook!</i></a>
-                        <a href="#" target="_blank"><i class="fa-brands fa-instagram"> Follow us on instagram!</i></a>
-                    </div>
-                    <div class="col-12 col-md-6">
+                <!-- Email Subscription Form, Social Links, Contact Number, and Email -->
+                <div class="row justify-content-center text-center">
+                    <!-- Email Subscription Form -->
+                    <div class="col-12 col-md-6 mx-auto">
                         <h3>Subscribe!</h3>
-                        <p>Receive exclusive offers and discount codes by subscribing to our monthly newsletter</p>
-                        <!-- Beging Mailchimp signup form -->
+                        <p>Receive exclusive offers and discount codes by subscribing to our monthly newsletter
+                        </p>
+                        <!-- Begin Mailchimp signup form -->
                         <div id="mc_embed_shell">
                             <div id="mc_embed_signup">
                                 <form
@@ -187,7 +183,8 @@
                                     class="validate" target="_blank">
                                     <div id="mc_embed_signup_scroll">
                                         <h2>Subscribe</h2>
-                                        <div class="indicates-required"><span class="asterisk">*</span> indicates
+                                        <div class="indicates-required"><span class="asterisk">*</span>
+                                            indicates
                                             required</div>
                                         <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span
                                                     class="asterisk">*</span></label><input type="email" name="EMAIL"
@@ -199,8 +196,8 @@
                                             </div>
                                         </div>
                                         <div aria-hidden="true" style="position: absolute; left: -5000px;">
-                                            /* real people should not fill this in and expect good things - do not
-                                            remove this or risk form bot signups */
+                                            <!-- Real people should not fill this in and expect good things - do not
+                                            remove this or risk form bot signups -->
                                             <input type="text" name="b_4a7312fea9cb1e1130ba29f62_ba37c443f1"
                                                 tabindex="-1" value="">
                                         </div>
@@ -227,10 +224,49 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Social Links -->
+                    <div class="col-12 col-md-3 mx-auto">
+                        <h3>Follow us on</h3>
+                        <!-- This link below will contain link to Fit Frontier Facebook/Meta page -->
+                        <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        <!-- This link below will contain a link to Instagram -->
+                        <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <!-- Contact Number and Email -->
+                    <div class="col-12 col-md-3 mx-auto">
+                        <h3>Contact</h3>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <a href="tel:+353851234567" target="_blank" rel="noopener"
+                                    aria-label="Call me on +353 85 1234 567" class="list-group-link">+353 85
+                                    1234 567
+                                </a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="mailto:vera@reclaimedtreasures.mt" target="_blank" rel="noopener"
+                                    aria-label="Email us at fitfrontierhq@email.com (opens in a new tab)"
+                                    class="list-group-link">fitfrontierhq@email.com
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </section>
+            <!-- Copyright -->
+            <div class="row">
+                <div class="col">
+                    <p class="copyright text-center text-muted pt-2">
+                        &copy; 2023 Fit Frontier | Developed By
+                        <a href=https://www.linkedin.com/in/mark-o-sullivan-592484191/ target="_blank"
+                            aria-label="Website creator LinkedIn page (opens in a new tab)"> Mark O'Sullivan
+                        </a>
+                        for Code Institute's Portfolio Project 5
+                    </p>
+                </div>
+            </div>
         </div>
     </footer>
+
 
     {% block postloadjs %}
     {% endblock %}
