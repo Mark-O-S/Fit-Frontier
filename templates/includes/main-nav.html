@@ -1,10 +1,17 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <!-- Home -->
-        <li class="nav-item">
-            <a href="{% url 'home' %}" class="font-weight-bold text-black nav-link mx-lg-5">
+        <li class="nav-item dropdown">
+            <a href="{% url 'home' %}" class="dropdown-toggle font-weight-bold text-black nav-link mx-lg-5"
+                data-toggle="dropdown">
                 Home
             </a>
+            <!-- Sorting options -->
+            <div class="dropdown-menu text-md-left border-0" aria-labelledby="shop-link">
+                <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">By Price</a>
+                <a class="dropdown-item" href="{% url 'products' %}?sort=rating&direction=desc">By Rating</a>
+                <a class="dropdown-item" href="{% url 'products' %}?sort=category&direction=asc">By Category</a>
+            </div>
         </li>
         <!-- Shop Dropdown -->
         <li class="nav-item dropdown">

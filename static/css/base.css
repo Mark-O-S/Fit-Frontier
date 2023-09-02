@@ -1,58 +1,57 @@
 html {
-  height: 100%;
+    height: 100%;
 }
 
 body {
-  font-family: "Rubik", sans-serif;
-  background-color: #f6f1f1;
+    font-family: "Rubik", sans-serif;
+    background-color: #f6f1f1;
 }
 
 /* from Bulma */
 .icon {
-  align-items: center;
-  display: inline-flex;
-  justify-content: center;
-  height: 1.5rem;
-  width: 1.5rem;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
 }
 
 .logo-font {
-  text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 .main-logo-link {
-  width: fit-content;
+    width: fit-content;
 }
 
 /* Home Page & Hero Image */
 
 .homepage-hero {
-  background: url("/media/cropped-home-page-fit-frontier-img.jpg") no-repeat
-    center top fixed;
+    background: url("/media/cropped-home-page-fit-frontier-img.jpg") no-repeat center top fixed;
 }
 
 .hero-container {
-  height: 75vh;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+    height: 75vh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 .opaque-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .jumbotron {
-  background-color: transparent;
-  margin-top: 10rem;
-  margin-bottom: 10rem;
+    background-color: transparent;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
 }
 
 /* Home Page Content */
@@ -60,96 +59,96 @@ body {
 /* Custom Buttons */
 
 .btn {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 .btn-blue {
-  background-color: #1fb8e3;
-  color: #000;
-  font-weight: bold;
-  border: none;
-  font-size: 1rem;
+    background-color: #1fb8e3;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    font-size: 1rem;
 }
 
 .btn-blue:hover,
 .btn-blue:active,
 .btn-blue:focus {
-  background-color: #019bc6;
-  color: #fff;
+    background-color: #019bc6;
+    color: #fff;
 }
 
 /* Custom colors */
 
 .text-black {
-  color: #000 !important;
+    color: #000 !important;
 }
 
 .border-black {
-  border: 1px solid #000;
+    border: 1px solid #000;
 }
 
 .border-blue {
-  border: 1px solid #1fb8e3;
+    border: 1px solid #1fb8e3;
 }
 
 .bg-orange {
-  background-color: #e65a3a;
+    background-color: #e65a3a;
 }
 
-a.category-badge > span.badge:hover {
-  background: #019bc6;
-  color: #fff !important;
+a.category-badge>span.badge:hover {
+    background: #019bc6;
+    color: #fff !important;
 }
 
 .overlay {
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  position: fixed;
-  background: white;
-  z-index: -1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: white;
+    z-index: -1;
 }
 
 /* Mailchimp */
 #mc_embed_signup {
-  background: #fff;
-  clear: left;
-  font: 14px Helvetica, Arial, sans-serif;
-  width: 450px;
+    background: #fff;
+    clear: left;
+    font: 14px Helvetica, Arial, sans-serif;
+    width: 450px;
 }
 
 /* ------------------------ Media Queries */
 
 /* A slightly larger container on xl screens */
 @media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
+    .container {
+        max-width: 80%;
+    }
 }
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
-  .fixed-top-desktop-only {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
-  }
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
 
-  .header-container {
-    padding-top: 164px;
-  }
+    .header-container {
+        padding-top: 164px;
+    }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
-  .header-container {
-    padding-top: 116px;
-  }
+    .header-container {
+        padding-top: 116px;
+    }
 
-  body {
-    height: calc(100vh - 116px);
-  }
+    body {
+        height: calc(100vh - 116px);
+    }
 }
