@@ -3,11 +3,12 @@ html {
 }
 
 body {
-    font-family: "Rubik", sans-serif;
+    font-family: 'Rubik', sans-serif;
     background-color: #f6f1f1;
 }
 
 /* from Bulma */
+
 .icon {
     align-items: center;
     display: inline-flex;
@@ -22,6 +23,13 @@ body {
 
 .main-logo-link {
     width: fit-content;
+}
+
+/* Site logo name */
+
+#site-name {
+    font-weight: bolder;
+    font-family: "Rubik";
 }
 
 /* Home Page & Hero Image */
@@ -53,8 +61,6 @@ body {
     margin-top: 10rem;
     margin-bottom: 10rem;
 }
-
-/* Home Page Content */
 
 /* Custom Buttons */
 
