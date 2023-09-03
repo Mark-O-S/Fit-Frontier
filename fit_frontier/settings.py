@@ -35,6 +35,7 @@ ALLOWED_HOSTS = [
     '8000-mark-o-s-fit-frontier-swjq4ir562.us2.codeanyapp.com',
     'https://fit-frontier-d971762c041b.herokuapp.com/',
     'fit-frontier-d971762c041b.herokuapp.com', 'localhost',
+    '8000-markos-fitfrontier-emcijhe57po.ws-eu104.gitpod.io',
 ]
 
 
