@@ -86,7 +86,7 @@ body {
 /* Custom colors */
 
 .text-black {
-    color: #000 !important;
+    color: #000;
 }
 
 .border-black {
@@ -104,6 +104,19 @@ body {
 a.category-badge>span.badge:hover {
     background: #019bc6;
     color: #fff !important;
+}
+
+.btn-outline-black {
+    background: white;
+    color: black !important; /* use important to override link colors for <a> elements */
+    border: 1px solid black;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
 }
 
 .overlay {
@@ -130,18 +143,6 @@ a.category-badge>span.badge:hover {
     cursor: pointer;
 }
 
-.btn-outline-black {
-    background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
-    border: 1px solid black;
-}
-
-.btn-outline-black:hover,
-.btn-outline-black:active,
-.btn-outline-black:focus {
-    background: black;
-    color: white !important;
-}
 
 /* Mailchimp */
 
