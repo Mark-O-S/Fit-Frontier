@@ -1,3 +1,4 @@
+<!-- Search Icon & Dropdown field -->
 <li class="list-inline-item">
     <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown"
         aria-haspopup="true" aria-expanded="false">
@@ -22,6 +23,7 @@
         </form>
     </div>
 </li>
+<!-- Account Icon & dropdown links -->
 <li class="list-inline-item dropdown">
     <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown"
         aria-haspopup="true" aria-expanded="false">
@@ -43,6 +45,7 @@
         {% endif %}
     </div>
 </li>
+<!-- Basket Icon & dropdown total link -->
 <li class="list-inline-item">
     <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none"
         href="{%  url 'view_bag' %}">
@@ -50,9 +53,9 @@
             <div><i class="fas fa-shopping-bag fa-lg"></i></div>
             <p class="my-0">
                 {% if grand_total %}
-                ${{ grand_total|floatformat:2 }}
+                €{{ grand_total|floatformat:2 }}
                 {% else %}
-                $0.00
+                €0.00
                 {% endif %}
             </p>
         </div>
