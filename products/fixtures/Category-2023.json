@@ -1,0 +1,50 @@
+[
+    {
+        "id": 6,
+        "fields": {
+            "name": "on_sale",
+            "friendly_name": "On Sale"
+        },
+        "model": "products.category"
+    },
+    {
+        "id": 5,
+        "fields": {
+            "name": "new",
+            "friendly_name": "New"
+        },
+        "model": "products.category"
+    },
+    {
+        "id": 4,
+        "fields": {
+            "name": "weight_plates",
+            "friendly_name": "Weight Plates"
+        },
+        "model": "products.category"
+    },
+    {
+        "id": 3,
+        "fields": {
+            "name": "kettlebells",
+            "friendly_name": "Kettlebells"
+        },
+        "model": "products.category"
+    },
+    {
+        "id": 2,
+        "fields": {
+            "name": "barbells",
+            "friendly_name": "Barbells"
+        },
+        "model": "products.category"
+    },
+    {
+        "id": 1,
+        "fields": {
+            "name": "dumbbells",
+            "friendly_name": "Dumbbells"
+        },
+        "model": "products.category"
+    }
+]

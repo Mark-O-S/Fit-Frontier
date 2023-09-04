@@ -1,9 +1,11 @@
 from django.contrib import admin
 from .models import Product, Category
+from import_export.admin import ImportExportModelAdmin
+from .resource import CategoryResource, ProductResource
 
 # Register your models here.
 
-class ProductAdmin(admin.ModelAdmin):
+class ProductAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     list_display = (
         'sku',
         'name',
@@ -15,13 +17,16 @@ class ProductAdmin(admin.ModelAdmin):
         'stock'
     )
 
+    resource_class = ProductResource
+
     ordering = ('sku',)
 
-class CategoryAdmin(admin.ModelAdmin):
+class CategoryAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     list_display = (
         'friendly_name',
         'name',
     )
+    resource_class = CategoryResource
 
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
