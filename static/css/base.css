@@ -7,6 +7,12 @@ body {
     background-color: #f6f1f1;
 }
 
+a:hover,
+a:focus,
+a:active {
+    color: #019bc6;
+}
+
 /* from Bulma */
 
 .icon {
@@ -89,6 +95,10 @@ body {
     color: #000;
 }
 
+.text-blue {
+    color: #1fb8e3;
+}
+
 .border-black {
     border: 1px solid #000;
 }
@@ -103,12 +113,12 @@ body {
 
 a.category-badge>span.badge:hover {
     background: #019bc6;
-    color: #fff !important;
+    color: #fff;
 }
 
 .btn-outline-black {
     background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
+    color: black; /* use important to override link colors for <a> elements */
     border: 1px solid black;
 }
 
@@ -116,7 +126,11 @@ a.category-badge>span.badge:hover {
 .btn-outline-black:active,
 .btn-outline-black:focus {
     background: black;
-    color: white !important;
+    color: white;
+}
+
+.bg-white {
+    background-color: #fff;
 }
 
 .overlay {
@@ -151,6 +165,17 @@ a.category-badge>span.badge:hover {
     clear: left;
     font: 14px Helvetica, Arial, sans-serif;
     width: 450px;
+}
+
+#mc_embed_signup > .button {
+    background-color: #1fb8e3;
+}
+
+#mc_embed_signup .button:hover,
+#mc_embed_signup .button:active,
+#mc_embed_signup .button:focus {
+    background-color: #019bc6;
+    color: #fff;
 }
 
 input[name='q']::placeholder {
@@ -190,35 +215,35 @@ input[name='q']::placeholder {
 /* Convenience classes - colors copied from Bootstrap */
 
 .arrow-primary {
-    border-bottom-color: #007bff !important;
+    border-bottom-color: #007bff;
 }
 
 .arrow-secondary {
-    border-bottom-color: #6c757d !important;
+    border-bottom-color: #6c757d;
 }
 
 .arrow-success {
-    border-bottom-color: #28a745 !important;
+    border-bottom-color: #28a745;
 }
 
 .arrow-danger {
-    border-bottom-color: #dc3545 !important;
+    border-bottom-color: #dc3545;
 }
 
 .arrow-warning {
-    border-bottom-color: #ffc107 !important;
+    border-bottom-color: #ffc107;
 }
 
 .arrow-info {
-    border-bottom-color: #17a2b8 !important;
+    border-bottom-color: #17a2b8;
 }
 
 .arrow-light {
-    border-bottom-color: #f8f9fa !important;
+    border-bottom-color: #f8f9fa;
 }
 
 .arrow-dark {
-    border-bottom-color: #343a40 !important;
+    border-bottom-color: #343a40;
 }
 
 .bag-notification-wrapper {
