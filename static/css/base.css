@@ -44,6 +44,10 @@ a:active {
     background: url("/media/cropped-home-page-fit-frontier-img.jpg") no-repeat center top fixed;
 }
 
+#on-sale {
+    background-image: url("/media/home-new-in-stock-btn-img.jpg");
+}
+
 .hero-container {
     height: 75vh;
     background-size: cover;
