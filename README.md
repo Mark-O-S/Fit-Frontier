@@ -9,8 +9,14 @@ This project is created as part of my fifth and final project for a Diploma in S
 <h2 style="text-align: center;"><img src="https://i.ibb.co/TYvTXz1/Example-CI.png"></h2>
 
 # **Table of Contents**
-
-- [**_User Experience_**](#user-experience-ux)
+   - [**User Experience**](#user-experience-ux)
+      - [Site Goals](#site-goals)
+      - [Features](#features)
+   - [**Technologies Used**](#technologies-used)
+   - [**Testing**](#testing)
+   - [**SEO**](#search-engine-optimization-seo--social-media-marketing)
+   - [**Deployment**](#deployment)
+   - [**Credits & Acknowledgements**](#credits)
 
 ## User Experience (UX)
 
@@ -44,11 +50,16 @@ This project is created as part of my fifth and final project for a Diploma in S
 
   - Contact Us Page Wireframe - [View](https://github.com/)
 
+
+Back to [top](#table-of-contents)
+
 ## Features
 
 - Responsive on all device sizes
 
 - Interactive elements
+
+Back to [top](#table-of-contents)
 
 ## Technologies Used
 
@@ -66,6 +77,8 @@ This project is created as part of my fifth and final project for a Diploma in S
 - [Amazon Web Services S3 Bucket](https://aws.amazon.com/s3/) - A cloud storage service which provides object storage, built for storing and recovering any amount of information or data from anywhere over the internet through a web services interface
 - [Heroku](https://www.heroku.com) - A cloud platform as a service
 - [Bootstrap](https://getbootstrap.com/) - A Framework for building responsive, mobile-fist sites
+
+Back to [top](#table-of-contents)
 
 ## Testing
 
@@ -95,6 +108,8 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
      2. The user can also scroll to the bottom of any page on the site to locate social media links in the footer.
      3. At the bottom of the Contact Us page, the user is told underneath the form, that alternatively they can contact the organisation on social media which highlights the links to them.
 
+Back to [top](#table-of-contents)
+
 - #### Returning Visitor Goals
 
   1. As a Returning Visitor, I want to find the new programming challenges or hackathons.
@@ -115,6 +130,8 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
      2. Alternatively, the user can scroll to the bottom of the Home page to find the Facebook Group redirect card and can easily join by clicking the "Join Now!" button which like any external link, will open in a new tab to ensure they can get back to the website easily.
      3. If the user is on the "Our Favourites" page they will also be greeted with a call to action button to invite the user to the Facebook group. The user is incentivized as they are told there is a weekly favourite product posted in the group.
 
+   Back to [top](#table-of-contents)
+
 - #### Frequent User Goals
 
   1. As a Frequent User, I want to check to see if there are any newly added challenges or hackathons.
@@ -130,6 +147,8 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
      2. To the right hand side of the footer the user can see "Subscribe to our Newsletter" and are prompted to Enter their email address.
      3. There is a "Submit" button to the right hand side of the input field which is located close to the field and can easily be distinguished.
 
+   Back to [top](#table-of-contents)
+
 ### Further Testing
 
 - The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
@@ -137,13 +156,30 @@ The W3C Markup Validator and W3C CSS Validator Services were used to validate ev
 - A large amount of testing was done to ensure that all pages were linking correctly.
 - Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues.
 
+Back to [top](#table-of-contents)
+
 ### Known Bugs
 
 - In the edit shopping bag page. Updating the quantity of the item above the quantity of 1 works fine, however. I received errors when I try to change the item quantity to zero and remove the item that way.
  
  
 The reason for this error was because I wrapped ‘item_id’ in square brackets. I needed to use parentheses to call it, not square brackets.
+
+
+Back to [top](#table-of-contents)
  
+## Search Engine Optimization (SEO) & Social Media Marketing
+
+### Social Media Marketing
+
+Building a robust social network with active participation and connecting it to your business website can lead to increased sales.
+
+I've created a Facebook business account wich can be acessed **[here](https://www.facebook.com/profile.php?id=61550885970917)**.
+
+![fb-page](media/fit-frontier-facebook-page.png)
+
+Back to [top](#table-of-contents)
+
 
 ## Deployment
 
@@ -159,12 +195,16 @@ To obtain your own Postgres Database, sign-up with your GitHub account, then fol
 - Select the **Region** and **Data Center** closest to you.
 - Once created, click on the new database name, where you can view the database URL and Password.
 
+Back to [top](#table-of-contents)
+
 ### Amazon AWS
 
 This project uses [Amazon Web Service(AWS)](https://aws.amazon.com) to store media and static files online.
 
 Once you've created an AWS account and logged-in, follow these series of steps to get your project connected.
 Make sure you're on the **AWS Management Console** page.
+
+Back to [top](#table-of-contents)
 
 #### S3 Bucket
 
@@ -191,6 +231,8 @@ Make sure you're on the **AWS Management Console** page.
 		}
 	]
 ```
+
+Back to [top](#table-of-contents)
 
 - Copy your **ARN** string.
 - From the **Bucket Policy** tab, select the **Policy Generator** link, and use the following steps:
@@ -223,6 +265,9 @@ Make sure you're on the **AWS Management Console** page.
 	- Click **Save**.
 - From the **Access Control List (ACL)** section, click "Edit" and enable **List** for **Everyone (public access)**, and accept the warning box.
 	- If the edit button is disabled, you need to change the **Object Ownership** section above to **ACLs enabled** (mentioned above).
+
+
+Back to [top](#table-of-contents)
 
 #### IAM
 
@@ -275,6 +320,8 @@ Once on the IAM page, follow these steps:
 	- `AWS_ACCESS_KEY_ID` = **Access key ID**
 	- `AWS_SECRET_ACCESS_KEY` = **Secret access key**
 
+Back to [top](#table-of-contents)
+
 #### Final AWS Setup
 
 - If Heroku Config Vars has `DISABLE_COLLECTSTATIC` still, this can be removed now, so that AWS will handle the static files.
@@ -282,6 +329,8 @@ Once on the IAM page, follow these steps:
 - Select any existing media images for your project to prepare them for being uploaded into the new folder.
 - Under **Manage Public Permissions**, select **Grant public read access to this object(s)**.
 - No further settings are required, so click **Upload**.
+
+Back to [top](#table-of-contents)
 
 ### Stripe API
 
@@ -305,6 +354,7 @@ As a backup, in case users prematurely close the purchase-order page during paym
 - You'll have a new key here:
 	- `STRIPE_WH_SECRET` = Signing Secret (Wehbook) Key (starts with **wh**)
 
+Back to [top](#table-of-contents)
 
 ### Heroku Deployment
 
@@ -357,6 +407,8 @@ Or:
 
 The project should now be connected and deployed to Heroku!
 
+Back to [top](#table-of-contents)
+
 ### Local Deployment
 
 This project can be cloned or forked in order to make a local copy on your own system.
@@ -399,6 +451,8 @@ If you'd like to backup your database models, use the following command for each
 - `python3 manage.py dumpdata your-model > your-model.json`
 - *repeat this action for each model you wish to backup*
 
+Back to [top](#table-of-contents)
+
 #### Cloning
 
 You can clone the repository by following these steps:
@@ -418,6 +472,9 @@ Alternatively, if using Gitpod, you can click below to create your own workspace
 
 Please note that in order to directly open the project in Gitpod, you need to have the browser extension installed.
 A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/configure/user-settings/browser-extension).
+
+
+Back to [top](#table-of-contents)
 
 #### Forking
 
@@ -442,6 +499,8 @@ This project was developed in [CodeAnywhere](https://app.codeanywhere.com/) Clou
 5. The page will automatically refresh.
 6. Scroll back down through the page to locate the now published site [link](https://github.com) in the "GitHub Pages" section.
 
+Back to [top](#table-of-contents)
+
 ### Forking the GitHub Repository
 
 By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
@@ -449,6 +508,8 @@ By forking the GitHub Repository we make a copy of the original repository on ou
 1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. You should now have a copy of the original repository in your GitHub account.
+
+Back to [top](#table-of-contents)
 
 ### Making a Local Clone
 
@@ -476,6 +537,8 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
+Back to [top](#table-of-contents)
+
 ## Credits
 
 ### Code
@@ -486,18 +549,26 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 - [MDN Web Docs](https://developer.mozilla.org/) : For Pattern Validation code. Code was modified to better fit my needs and to match an Irish phone number layout to ensure correct validation. Tutorial Found [Here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/tel#Pattern_validation)
 
+Back to [top](#table-of-contents)
+
 ### Content
 
 - All content was written by the developer.
 
 - Psychological properties of colours text in the README.md was found [here](http://www.colour-affects.co.uk/psychological-properties-of-colours)
 
+Back to [top](#table-of-contents)
+
 ### Media
 
 - All Images were created by the developer.
+
+Back to [top](#table-of-contents)
 
 ### Acknowledgements
 
 - My Mentor for continuous helpful feedback.
 
 - Tutor support at Code Institute for their support.
+
+Back to [top](#table-of-contents)
