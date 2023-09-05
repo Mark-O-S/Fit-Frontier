@@ -122,7 +122,7 @@ a.category-badge>span.badge:hover {
 
 .btn-outline-black {
     background: white;
-    color: black; /* use important to override link colors for <a> elements */
+    color: black;
     border: 1px solid black;
 }
 
@@ -160,6 +160,8 @@ a.category-badge>span.badge:hover {
 .remove-item {
     cursor: pointer;
 }
+
+/* Footer */ 
 
 
 /* Mailchimp */
