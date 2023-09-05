@@ -205,7 +205,6 @@ Make sure you're on the **AWS Management Console** page.
 
 
    ```shell
-
    {
       "Version": "2012-10-17",
       "Id": "Policy1234567890",
@@ -219,7 +218,6 @@ Make sure you're on the **AWS Management Console** page.
          }
       ]
    }
-
    ```
    - Before you click "Save", add `/*` to the end of the Resource key in the Bucket Policy Editor (like above).
 	- Click **Save**.

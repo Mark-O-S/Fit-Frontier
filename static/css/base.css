@@ -256,15 +256,6 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
-/* ------------------------ Media Queries */
-
-/* A slightly larger container on xl screens */
-@media (min-width: 1200px) {
-    .container {
-        max-width: 80%;
-    }
-}
-
 /* Allauth form formatting */
 
 .allauth-form-inner-content p {
@@ -347,16 +338,30 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
-/* fixed top navbar only on medium and up */
+/* ------------------------ Media Queries */
+
+/* Small screens (up to 576px wide) */
+@media (max-width: 576px) {
+    /* Define styles for small screens here */
+    .container {
+      /* Example styles for small screens */
+      width: 100%;
+    }
+    /* Add more styles as needed */
+  }
+
+/* Large screens (greater than 991px wide) */
 @media (min-width: 992px) {
+    /* Navbar styles for large screens */
     .fixed-top-desktop-only {
         position: fixed;
         top: 0;
         right: 0;
         left: 0;
-        z-index: 1030;
+        z-index: 1000;
     }
 
+    /* Adjust header container padding */
     .header-container {
         padding-top: 164px;
     }
@@ -364,11 +369,20 @@ input[name='q']::placeholder {
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
+    /* Adjust header container padding */
     .header-container {
         padding-top: 116px;
     }
 
+    /* Adjust body height for mobile */
     body {
         height: calc(100vh - 116px);
+    }
+}
+
+/* A slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
     }
 }
