@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_meta %}
+{% endblock %}
+
+{% block extra_title %} | About{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'home/css/about.css' %}">
+{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-6">
+            <h1>About Fitness Frontier</h1>
+            <p>Welcome to Fitness Frontier, your premier destination for high-quality fitness equipment in Ireland. We
+                are passionate about helping you achieve your fitness goals, whether you're a seasoned athlete or just
+                starting your fitness journey.</p>
+            <p>At Fitness Frontier, we offer a wide range of fitness equipment, including dumbbells, barbells,
+                kettlebells, and weight plates. Our products are carefully selected to meet the needs of fitness
+                enthusiasts of all levels.</p>
+            <p>What sets us apart:</p>
+            <ul>
+                <li>Top-Quality Products: We source our equipment from trusted manufacturers to ensure durability and
+                    performance.</li>
+                <li>Convenience: Shop online from the comfort of your home, and we'll deliver your fitness gear right to
+                    your doorstep.</li>
+                <li>Expert Support: Our team of fitness experts is here to assist you in making the right choices for
+                    your fitness journey.</li>
+            </ul>
+
+            p>At Fitness Frontier, we take pride in offering a wide range of fitness equipment to suit all your needs:
+            </p>
+            <ul>
+                <li><strong>Dumbbells:</strong> From lightweight to heavyweight, we have a variety of dumbbells to help
+                    you build strength and tone your muscles.</li>
+                <li><strong>Barbells:</strong> Whether you're into powerlifting or Olympic lifting, we have the right
+                    barbell for you.</li>
+                <li><strong>Kettlebells:</strong> Kettlebell workouts are a great way to improve your overall fitness,
+                    and we have a selection of kettlebells in different weights.</li>
+                <li><strong>Weight Plates:</strong> Our weight plates are designed for durability and precision,
+                    allowing you to customize your workouts.</li>
+            </ul>
+            <p>What sets us apart:</p>
+            <ul>
+                <li><strong>Top-Quality Products:</strong> We source our equipment from trusted manufacturers to ensure
+                    durability and performance.</li>
+                <li><strong>Convenience:</strong> Shop online from the comfort of your home, and we'll deliver your
+                    fitness gear right to your doorstep.</li>
+                <li><strong>Expert Support:</strong> Our team of fitness experts is here to assist you in making the
+                    right choices for your fitness journey.</li>
+                <li><strong>Community:</strong> Join our vibrant fitness community. Follow us on social media for
+                    workout tips, challenges, and success stories from our customers.</li>
+            </ul>
+        </div>
+        <div class="col-lg-6 img-wrapper">
+            <img src="https://fit-frontier.s3.eu-west-1.amazonaws.com/media/about-img.jpg" alt="person sitting with dumbbells" class="img-fluid rounded about-img">
+        </div>
+        <div class="col">
+            <h2>Our Mission</h2>
+            <p>At Fitness Frontier, our mission is to empower individuals to lead healthier lives by providing them with
+                the tools and knowledge to achieve their fitness goals. We believe that fitness is not just a hobby;
+                it's a way of life.</p>
+        </div>
+        <div class="col">
+            <h2>Contact Us</h2>
+            <p>If you have any questions, feedback, or need assistance, please don't hesitate to reach out to us. We are
+                here to help you on your fitness journey.</p>
+            <p>Email: <a href="mailto:info@fitnessfrontier.ie">info@fitnessfrontier.ie</a></p>
+            <p>Phone: +353 123 456 789</p>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

@@ -343,12 +343,9 @@ input[name='q']::placeholder {
 
 /* Small screens (up to 576px wide) */
 @media (max-width: 576px) {
-    /* Define styles for small screens here */
     .container {
-      /* Example styles for small screens */
       width: 100%;
     }
-    /* Add more styles as needed */
   }
 
 /* Large screens (greater than 991px wide) */
