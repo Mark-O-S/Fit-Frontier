@@ -37,6 +37,7 @@ ALLOWED_HOSTS = [
     'fit-frontier-d971762c041b.herokuapp.com', 'localhost',
     '8000-markos-fitfrontier-emcijhe57po.ws-eu104.gitpod.io',
     '8000-markos-fitfrontier-odtyad4dtcc.ws-eu104.gitpod.io',
+    '8000-markos-fitfrontier-uzmje6e1oma.ws-eu105.gitpod.io',
 ]
 
 

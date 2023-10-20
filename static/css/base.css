@@ -25,10 +25,15 @@ a:active {
 
 .logo-font {
     text-transform: uppercase;
+    color: #019bc6;
 }
 
 .main-logo-link {
     width: fit-content;
+}
+
+input[name='q']::placeholder {
+    color: #aab7c4;
 }
 
 /* Site logo name */
@@ -169,22 +174,6 @@ a.category-badge>span.badge:hover {
     background: #fff;
     clear: left;
     font: 14px Helvetica, Arial, sans-serif;
-    width: 450px;
-}
-
-#mc_embed_signup > .button {
-    background-color: #1fb8e3;
-}
-
-#mc_embed_signup .button:hover,
-#mc_embed_signup .button:active,
-#mc_embed_signup .button:focus {
-    background-color: #019bc6;
-    color: #fff;
-}
-
-input[name='q']::placeholder {
-    color: #aab7c4;
 }
 
 /* Bootstrap toasts */
