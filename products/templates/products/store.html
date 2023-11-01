@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+{% endblock %}
+
 {% block page_header %}
-<link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
 <div class="container header-container">
     <div class="row">
         <div class="col"></div>
@@ -11,7 +14,6 @@
 {% endblock %}
 
 {% block content %}
-<div class="overlay"></div>
 <div class="container-fluid">
     <div class="row">
         <div class="col text-center mt-3">
@@ -25,7 +27,7 @@
             <hr class="w-50 mb-1">
         </div>
     </div>
-    <div class="row">
+    <div class="row store-bg">
         <div class="product-container col-10 offset-1">
             <div class="row mt-1 mb2">
                 <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
@@ -80,7 +82,7 @@
                             <div class="card-body pb-0">
                                 <p class="mb-0">{{ product.name }}</p>
                             </div>
-                            <div class="card-footer bg-white pt-0 border-0 text-left">
+                            <div class="card-footer pt-0 border-0 text-left">
                                 <div class="row">
                                     <div class="col">
                                         <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
