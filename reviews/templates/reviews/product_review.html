@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+        <h2 class="text-uppercase text-center text-bold">Review this product</h2>
+        {% if request.user.is_authenticated %}
+        <form method="post" action=".">
+            {% csrf_token %}
+
+            <div>
+                <label>Rating</label>
+                <select name="rating">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5" selected >5</option>
+                </select>
+            </div>
+            <div>
+                <label>Write a customer review</label>
+                <textarea name="content"></textarea>
+            </div>
+            <div>
+                <button>Submit</button>
+            </div>
+        </form>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
