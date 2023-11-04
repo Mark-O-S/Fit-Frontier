@@ -1,30 +1,42 @@
 from .models import Review, Product
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib import messages
 
 
-def add_product_review(request, product_id):
-    """ A view to show an individual product review """
-    print("Success")
-
+def add_review(request, product_id):
+    """ A view to add an individual product review """
     product = get_object_or_404(Product, pk=product_id)
-    product_review = Review.objects.filter(product=product)
 
     context = {
-        'product_review': product_review,
-    }
+            'product': product,
+        }
 
-    return render(request, 'reviews/product_review.html', context)
+    if request.method == 'POST':
+        rating = request.POST.get('rating', 5)
+        content = request.POST.get('content')
+        headline = request.POST.get('headline')
+
+        if content:
+            Review.objects.create(
+                product=product,
+                rating = rating,
+                comment=content,
+                headline =headline,
+                reviewed_by=request.user,
+            )
+            messages.success(request, "Your review has been "
+                                      "submitted!")
+            return render(request, 'products/product_detail.html', context)
+    
+    return render(request, 'products/product_detail.html', context)
 
 
-def list_all_reviews(request):
-    """ A view to show an individual product review """
-    print("Success")
-
+def show_review_product(request, product_id):
+    """ A view to add an individual product review """
     product = get_object_or_404(Product, pk=product_id)
-    product_review = Review.objects.filter(product__in=product)
 
     context = {
-        'product_review': product_review,
+        'product': product,
     }
 
     return render(request, 'reviews/product_review.html', context)

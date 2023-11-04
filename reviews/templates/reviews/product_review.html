@@ -14,28 +14,33 @@
     <div class="container">
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <h2 class="text-uppercase text-center text-bold">Review this product</h2>
+            <h3 class="text-uppercase text-center text-bold">{{ product.name }}</h3>
             {% if request.user.is_authenticated %}
-            <form method="post" action=".">
-                {% csrf_token %}
+                <form method="POST" action="{% url 'reviews:add_review' product.id %}">
+                    {% csrf_token %}
 
-                <div>
-                    <label>Rating</label>
-                    <select name="rating">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5" selected >5</option>
-                    </select>
-                </div>
-                <div>
-                    <label>Write a customer review</label>
-                    <textarea name="content"></textarea>
-                </div>
-                <div>
-                    <button>Submit</button>
-                </div>
-            </form>
+                    <div>
+                        <label>Rating</label>
+                        <select name="rating">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5" selected >5</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Headline</label>
+                        <input type="text" name="headline"></input>
+                    </div>
+                    <div>
+                        <label>Write a customer review</label>
+                        <textarea name="content"></textarea>
+                    </div>
+                    <div>
+                        <button class="btn btn-lg btn-blue text-uppercase rounded py-3" type="submit">Add Review</button>
+                    </div>
+                </form>
             {% endif %}
         </div>
     </div>
