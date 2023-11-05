@@ -38,6 +38,11 @@
                         </a>
                     </p>
                 {% endif %}
+                {% if product.stock > 0 %}
+                    <p class="small text-blue">In Stock</p>
+                {% else %}
+                    <p class="small text-danger">Out of Stock</p>
+                {% endif %}
                 {% if product.average_rating %}
                     <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.average_rating|floatformat:1 }} / 5</small>
                 {% else %}

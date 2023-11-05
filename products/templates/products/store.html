@@ -94,6 +94,11 @@
                                             </a>
                                         </p>
                                         {% endif %}
+                                        {% if product.stock > 0 %}
+                                            <p class="small text-blue">In Stock</p>
+                                        {% else %}
+                                            <p class="small text-danger">Out of Stock</p>
+                                        {% endif %}
                                         {% if product.average_rating %}
                                         <small class="text-muted"><i class="fas fa-star mr-1">{{ product.average_rating }} /
                                                 5</i></small>
