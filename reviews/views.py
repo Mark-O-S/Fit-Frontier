@@ -16,7 +16,7 @@ def add_review(request, product_id):
     product_reviews = Review.objects.filter(product=product)
 
     user_product_review = (
-        [product_review for product_review in product.reviews.all()
+        [product_review for product_review in Review.objects.filter(product=product)
             if request.user == product_review.reviewed_by]
     )
     user_reviewed_product = len(user_product_review) > 0
@@ -64,7 +64,7 @@ def edit_product_review(request, product_id):
     product_reviews = Review.objects.filter(product=product)
 
     user_product_review = (
-        [product_review for product_review in product.reviews.all()
+        [product_review for product_review in Review.objects.filter(product=product)
             if request.user == product_review.reviewed_by]
     )
     user_reviewed_product = len(user_product_review) > 0
@@ -103,7 +103,7 @@ def delete_product_review(request, product_id):
     product_reviews = Review.objects.filter(product=product)
 
     user_product_review = (
-        [product_review for product_review in product.reviews.all()
+        [product_review for product_review in Review.objects.filter(product=product)
             if request.user == product_review.reviewed_by]
     )
 
@@ -128,7 +128,7 @@ def show_review_product(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
 
     user_product_review = (
-        [product_review for product_review in product.reviews.all()
+        [product_review for product_review in Review.objects.filter(product=product)
             if request.user == product_review.reviewed_by]
     )
     user_reviewed_product = len(user_product_review) > 0
@@ -164,7 +164,7 @@ def show_delete_product_review(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
 
     user_product_review = (
-        [product_review for product_review in product.reviews.all()
+        [product_review for product_review in Review.objects.filter(product=product)
             if request.user == product_review.reviewed_by]
     )
     user_reviewed_product = len(user_product_review) > 0

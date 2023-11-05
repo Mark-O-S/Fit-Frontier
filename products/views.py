@@ -67,7 +67,7 @@ def product_detail(request, product_id):
     product_reviews = Review.objects.filter(product=product)
 
     user_product_reviews = (
-        [product_review for product_review in product.reviews.all()
+        [product_review for product_review in Review.objects.filter(product=product)
             if request.user == product_review.reviewed_by]
     )
     user_reviewed_product = len(user_product_reviews) > 0
