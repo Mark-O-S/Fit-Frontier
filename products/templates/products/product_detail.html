@@ -38,8 +38,8 @@
                         </a>
                     </p>
                 {% endif %}
-                {% if product.rating %}
-                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                {% if product.average_rating %}
+                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.average_rating|floatformat:1 }} / 5</small>
                 {% else %}
                     <small class="text-muted">No Rating</small>
                 {% endif %}
@@ -120,7 +120,7 @@
                                 <a href="{% url 'reviews:show_edit_product_review' product.id %}"
                                     class="btn btn-outline-info btn-sm"><small>Edit</small>
                                 </a>
-                                <a href="{% url 'reviews:delete_review' product.id %}"
+                                <a href="{% url 'reviews:show_delete_product_review' product.id %}"
                                     class="btn btn-outline-danger btn-sm float-right">
                                     <small>Delete</small>
                                 </a>
