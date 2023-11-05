@@ -64,13 +64,16 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
-    product_reviews = Review.objects.filter(product=product)
 
-    user_product_reviews = (
-        [product_review for product_review in Review.objects.filter(product=product)
-            if request.user == product_review.reviewed_by]
-    )
-    user_reviewed_product = len(user_product_reviews) > 0
+    product_reviews = Review.objects.filter(product=product)
+    user_reviewed_product = False
+
+    if product_reviews:
+        user_product_reviews = (
+            [product_review for product_review in product_reviews
+                if request.user == product_review.reviewed_by]
+        )
+        user_reviewed_product = len(user_product_reviews) > 0
 
     context = {
         'product': product,
