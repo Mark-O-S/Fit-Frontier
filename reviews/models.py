@@ -10,4 +10,3 @@ class Review(models.Model):
     reviewed_by = models.ForeignKey(User, related_name='reviews', on_delete=models.CASCADE)
     reviewed_at = models.DateTimeField(auto_now_add=True)
     headline = models.TextField()
-    testfield = models.TextField(default="test")
