@@ -16,26 +16,29 @@
             <h2 class="text-uppercase text-center text-bold">Review this product</h2>
             <h3 class="text-uppercase text-center text-bold">{{ product.name }}</h3>
             {% if request.user.is_authenticated %}
-                <form method="POST" action="{% url 'reviews:add_review' product.id %}">
+                <form method="POST" action="{% url 'reviews:add_review' product.id %}" onsubmit="return checkAddReviewSelected()">
                     {% csrf_token %}
 
                     <div>
                         <label>Rating</label>
-                        <select name="rating">
+                        <select class="form-control" name="rating" id="add_review_rating">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
                             <option value="4">4</option>
                             <option value="5" selected >5</option>
                         </select>
+                        <p id="add-review-rating-error-message" style="color:red"></p>
                     </div>
                     <div>
                         <label>Headline</label>
-                        <input type="text" name="headline"></input>
+                        <input class="form-control" type="text" name="headline" id="add_review_headline"></input>
+                        <p id="add-review-headline-error-message" style="color:red"></p>
                     </div>
                     <div>
-                        <label>Write a customer review</label>
-                        <textarea name="content"></textarea>
+                        <label>Write a comment</label>
+                        <textarea class="form-control" name="content" id="add_review_content"></textarea>
+                        <p id="add-review-content-error-message" style="color:red"></p>
                     </div>
                     <div>
                         <button class="btn btn-lg btn-blue text-uppercase rounded py-3" type="submit">Add Review</button>

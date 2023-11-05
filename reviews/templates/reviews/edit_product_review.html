@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <h2 class="text-uppercase text-center text-bold">Review this product</h2>
+            <h3 class="text-uppercase text-center text-bold">{{ product.name }}</h3>
+            {% if request.user.is_authenticated %}
+                <form method="POST" action="{% url 'reviews:edit_product_review' product.id %}" onsubmit="return checkEditReviewSelected()">
+                    {% csrf_token %}
+
+                    <div>
+                        <label>Rating</label>
+                        <select name="rating" id="edit_review_rating">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5" selected >5</option>
+                        </select>
+                        <p id="edit-review-rating-error-message" style="color:red"></p>
+                    </div>
+                    <div>
+                        <label>Headline</label>
+                        <input type="text" name="headline" id="edit_review_headline"></input>
+                        <p id="edit-review-headline-error-message" style="color:red"></p>
+                    </div>
+                    <div>
+                        <label>Write a customer review</label>
+                        <textarea name="content" id="edit_review_content"></textarea>
+                        <p id="edit-review-content-error-message" style="color:red"></p>
+                    </div>
+                    <div>
+                        <button class="btn btn-lg btn-blue text-uppercase rounded py-3" type="submit">Update Review</button>
+                    </div>
+                </form>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

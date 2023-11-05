@@ -344,6 +344,55 @@
         var $mcj = jQuery.noConflict(true);
     </script>
 
+    <!-- Helper Javascript functions -->
+    <script type="text/javascript">
+
+        function checkReviewHeadline(headlineElement, headlineErrorId) {
+            console.log("headline", headlineElement.value);
+            if (headlineElement.value == "") {
+                document.getElementById(headlineErrorId).innerHTML = "Please fill out a headline";
+                return false;
+            } else {
+                document.getElementById(headlineErrorId).innerHTML = "";
+                return true;
+            }
+        }
+
+        function checkReviewContent(contentElement, contentErrorId) {
+            console.log("content", contentElement.value);
+            if (contentElement.value == "") {
+                document.getElementById(contentErrorId).innerHTML = "Please fill out the content box";
+                return false;
+            } else {
+                document.getElementById(contentErrorId).innerHTML = "";
+                return true;
+            }
+        }
+
+        function checkAddReviewSelected() {
+            const headline = document.getElementById("add_review_headline");
+            const content = document.getElementById("add_review_content");
+
+            const headlineSelected = checkReviewHeadline(headline, "add-review-headline-error-message");
+            const contentSelected = checkReviewContent(content, "add-review-content-error-message");
+
+            return headlineSelected && contentSelected;
+            
+        };
+
+        function checkEditReviewSelected() {
+            const headline = document.getElementById("edit_review_headline");
+            const content = document.getElementById("edit_review_content");
+
+            const headlineSelected = checkReviewHeadline(headline, "edit-review-headline-error-message");
+            const contentSelected = checkReviewContent(content, "edit-review-content-error-message");
+
+            return headlineSelected && contentSelected;
+            
+        };
+        
+    </script>
+
 </body>
 
 </html>

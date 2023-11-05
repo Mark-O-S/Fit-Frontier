@@ -91,11 +91,44 @@
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
                 </form>
-
-                <a href="{% url 'reviews:show_review_product' product.id %}"
-                role="button" class="btn btn-green rounded btn-sm">Add Review
-                </a>
+                {% if request.user.is_authenticated %}
+                    {% if user_reviewed_product %}
+                        <a href="{% url 'reviews:show_edit_product_review' product.id %}"
+                        role="button" class="btn btn-lg btn-blue text-uppercase rounded py-3">Edit your review
+                        </a>
+                    {% else %}
+                        <a href="{% url 'reviews:show_review_product' product.id %}"
+                        role="button" class="btn btn-lg btn-blue text-uppercase rounded py-3">Write a customer review
+                        </a>
+                    {% endif %}
+                {% endif %}
             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <h2>Reviews</h2>
+            {% for review in product_reviews %}
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card text-center border-black">
+                        <div class="card-body">
+                            <h4>{{ review.headline }}</h4>
+                            <p>{{ review.comment }}</p>
+                            <hr>
+                            <p>By <em><strong>{{ review.reviewed_by }}</strong></em></p>
+                            {% if review.reviewed_by == request.user %}
+                                <a href="{% url 'reviews:show_edit_product_review' product.id %}"
+                                    class="btn btn-outline-info btn-sm"><small>Edit</small>
+                                </a>
+                                <a href="{% url 'reviews:delete_review' product.id %}"
+                                    class="btn btn-outline-danger btn-sm float-right">
+                                    <small>Delete</small>
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
     </div>
 </div>
