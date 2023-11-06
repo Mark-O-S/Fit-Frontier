@@ -5,6 +5,7 @@ from .resource import CategoryResource, ProductResource
 
 # Register your models here.
 
+
 class ProductAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     list_display = (
         'sku',
@@ -21,12 +22,14 @@ class ProductAdmin(ImportExportModelAdmin, admin.ModelAdmin):
 
     ordering = ('sku',)
 
+
 class CategoryAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     list_display = (
         'friendly_name',
         'name',
     )
     resource_class = CategoryResource
+    
 
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)

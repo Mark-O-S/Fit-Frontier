@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 @login_required
 def add_review(request, product_id):
     """ A function to add an individual product review """
-    
+
     if not request.user.is_authenticated:
         messages.warning(request, "Only logged in users can add a review")
         return render(request, 'home/index.html')
@@ -165,7 +165,9 @@ def show_delete_product_review(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
 
     user_product_review = (
-        [product_review for product_review in Review.objects.filter(product=product)
+        [product_review for product_review in Review.objects.filter(
+            product=product
+            )
             if request.user == product_review.reviewed_by]
     )
     user_reviewed_product = len(user_product_review) > 0
@@ -175,7 +177,9 @@ def show_delete_product_review(request, product_id):
     }
 
     if not user_reviewed_product:
-        messages.warning(request, "You have no review to delete for this product. You can create a new review!")
+        messages.warning(
+            request, "You have no review to delete for this product. You can create a new review!"
+            )
         return redirect(reverse('product_detail', args=[product_id]))
 
     return render(request, 'reviews/delete_product_review.html', context)

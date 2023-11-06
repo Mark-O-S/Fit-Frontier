@@ -93,7 +93,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request',  # required by allauth
+                'django.template.context_processors.request',#required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
@@ -198,7 +198,6 @@ if 'USE_AWS' in os.environ:
         'CacheControl': 'max-age=94608000',
     }
 
-
     # Bucket Config
     AWS_STORAGE_BUCKET_NAME = 'fit-frontier'
     AWS_S3_REGION_NAME = 'eu-west-1'
@@ -236,9 +235,9 @@ if 'DEVELOPMENT' in os.environ:
     DEFAULT_FROM_EMAIL = 'fitfrontierhq@email.com'
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-    EMAIL_USE_TLS = 'True' 
-    EMAIL_PORT = 587 # Port for TLS
-    EMAIL_HOST = 'smtp.gmail.com' # SMTP server for Gmail
+    EMAIL_USE_TLS = 'True'
+    EMAIL_PORT = 587  # Port for TLS
+    EMAIL_HOST = 'smtp.gmail.com'  # SMTP server for Gmail
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
