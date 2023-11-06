@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required
 
 @login_required
 def add_review(request, product_id):
-    """ A view to add an individual product review """
+    """ A function to add an individual product review """
     
     if not request.user.is_authenticated:
         messages.warning(request, "Only logged in users can add a review")
@@ -15,6 +15,7 @@ def add_review(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     product_reviews = Review.objects.filter(product=product)
 
+    # Check if a user left a review for this product
     user_product_review = (
         [product_review for product_review in Review.objects.filter(product=product)
             if request.user == product_review.reviewed_by]
@@ -55,7 +56,7 @@ def add_review(request, product_id):
 
 @login_required
 def edit_product_review(request, product_id):
-    """ A view to update an individual product review """
+    """ A function to update an individual product review """
     if not request.user.is_authenticated:
         messages.warning(request, "Only logged in users can edit a review")
         return render(request, 'home/index.html')
@@ -94,7 +95,7 @@ def edit_product_review(request, product_id):
 
 @login_required
 def delete_product_review(request, product_id):
-    """ A view to delete an individual product review """
+    """ A function to delete an individual product review """
     if not request.user.is_authenticated:
         messages.warning(request, "Only logged in users can delete a review")
         return render(request, 'home/index.html')
@@ -124,7 +125,7 @@ def delete_product_review(request, product_id):
 
 @login_required
 def show_review_product(request, product_id):
-    """ A view to add an individual product review """
+    """ A view to display adding an individual product review """
     product = get_object_or_404(Product, pk=product_id)
 
     user_product_review = (
@@ -148,7 +149,7 @@ def show_review_product(request, product_id):
 
 @login_required
 def show_edit_product_review(request, product_id):
-    """ A view to edit an individual product review """
+    """ A view to display editing an individual product review """
     product = get_object_or_404(Product, pk=product_id)
 
     context = {
@@ -160,7 +161,7 @@ def show_edit_product_review(request, product_id):
 
 @login_required
 def show_delete_product_review(request, product_id):
-    """ A view to delete an individual product review """
+    """ A view to display deleting an individual product review """
     product = get_object_or_404(Product, pk=product_id)
 
     user_product_review = (

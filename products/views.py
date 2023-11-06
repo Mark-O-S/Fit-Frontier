@@ -65,9 +65,12 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
 
+    # Retrieve all reviews created for this product
     product_reviews = Review.objects.filter(product=product)
-    user_reviewed_product = False
 
+    # Check if a user left a review for this product
+    # Default is False
+    user_reviewed_product = False
     if product_reviews:
         user_product_reviews = (
             [product_review for product_review in product_reviews

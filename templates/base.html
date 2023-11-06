@@ -347,6 +347,7 @@
     <!-- Helper Javascript functions -->
     <script type="text/javascript">
 
+        // Check the headline input field is populated
         function checkReviewHeadline(headlineElement, headlineErrorId) {
             console.log("headline", headlineElement.value);
             if (headlineElement.value == "") {
@@ -358,6 +359,7 @@
             }
         }
 
+        // Check the content input field is populated
         function checkReviewContent(contentElement, contentErrorId) {
             console.log("content", contentElement.value);
             if (contentElement.value == "") {
@@ -369,6 +371,7 @@
             }
         }
 
+        // Check all input fields are populated for the add review form
         function checkAddReviewSelected() {
             const headline = document.getElementById("add_review_headline");
             const content = document.getElementById("add_review_content");
@@ -379,7 +382,8 @@
             return headlineSelected && contentSelected;
             
         };
-
+        
+        // Check all input fields are populated for the edit review form
         function checkEditReviewSelected() {
             const headline = document.getElementById("edit_review_headline");
             const content = document.getElementById("edit_review_content");
