@@ -105,12 +105,17 @@ input[name='q']::placeholder {
 
 /* Custom colors */
 
+
 .text-black {
     color: #000;
 }
 
 .text-blue {
     color: #1fb8e3;
+}
+
+.text-red {
+    color: red;
 }
 
 .border-black {
@@ -156,7 +161,6 @@ a.category-badge>span.badge:hover {
     background: white;
     z-index: -1;
 }
-
 
 
 /* Mailchimp */
