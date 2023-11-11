@@ -46,6 +46,7 @@
     </div>
 </li>
 <!-- Wish list -->
+{% if request.user.is_authenticated %}
 <li class="list-inline-item">
     <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none"
         href="{%  url 'wish_list:show_wishlist' %}">
@@ -57,6 +58,7 @@
         </div>
     </a>
 </li>
+{% endif %}
 <!-- Basket Icon & dropdown total link -->
 <li class="list-inline-item">
     <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none"

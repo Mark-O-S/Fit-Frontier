@@ -79,15 +79,17 @@ def product_detail(request, product_id):
         )
         user_reviewed_product = len(user_product_reviews) > 0
     
-    wishlist_product = Wishlist.objects.filter(wishlist_product=product, user=request.user)
-    user_added_wishlist_product = len(wishlist_product) > 0
-
+    # Check user is authenticated to check if they added this product to their wishlist
+    user_added_wishlist_product = False
+    if request.user.is_authenticated:
+        wishlist_product = Wishlist.objects.filter(wishlist_product=product, user=request.user)
+        user_added_wishlist_product = len(wishlist_product) > 0
 
     context = {
         'product': product,
         'product_reviews': product_reviews,
         'user_reviewed_product': user_reviewed_product,
-        'user_added_wishlist_product': wishlist_product
+        'user_added_wishlist_product': user_added_wishlist_product
     }
 
     return render(request, 'products/product_detail.html', context)
