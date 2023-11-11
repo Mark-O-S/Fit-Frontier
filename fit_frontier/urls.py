@@ -28,6 +28,7 @@ urlpatterns = [
     path('checkout/', include('checkout.urls')),
     path('profile/', include('profiles.urls')),
     path('reviews/', include(('reviews.urls', 'reviews'), namespace='reviews')),
+    path('wish_list/', include(('wish_list.urls', 'wish_list'), namespace='wish_list')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler404 = 'fit_frontier.views.error_404'

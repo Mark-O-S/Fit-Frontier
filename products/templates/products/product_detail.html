@@ -110,6 +110,17 @@
                         </a>
                     {% endif %}
                 {% endif %}
+                {% if request.user.is_authenticated %}
+                    {% if user_added_wishlist_product %}
+                        <a href="{% url 'wish_list:remove_wishlist_product' product.id %}"
+                        role="button" class="btn btn-outline-black text-uppercase rounded py-3">Remove this product from your wishlist
+                        </a>
+                    {% else %}
+                        <a href="{% url 'wish_list:add_wishlist_product' product.id %}"
+                        role="button" class="btn btn-outline-black text-uppercase rounded py-3">Add this product to your wishlist
+                        </a>
+                    {% endif %}
+                {% endif %}
             </div>
         </div>
     </div>
