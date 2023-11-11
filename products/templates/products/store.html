@@ -28,7 +28,7 @@
         </div>
     </div>
     <div class="row store-bg">
-        <div class="product-container col-10 offset-1">
+        <div class="product-container col-10 offset-1 mb-5">
             <div class="row mt-1 mb2">
                 <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                     <div class="sort-select-wrapper w-50">
@@ -65,80 +65,59 @@
                     </p>
                 </div>
             </div>
-            <div class="row">
+            <div class="row mx-auto">
                 {% for product in products %}
-                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                        <div class="card h-100 border-0">
-                            {% if product.image %}
-                            <a href="{% url 'product_detail' product.id %}">
-                                <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                            </a>
-                            {% else %}
-                            <a href="{% url 'product_detail' product.id %}">
-                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
-                                    alt="{{ product.name }}">
-                            </a>
-                            {% endif %}
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-5">
+                        <div class="card h-100 border-0 shadow-sm">
                             <div class="card-body pb-0">
-                                <p class="mb-0">{{ product.name }}</p>
+                                {% if product.image %}
+                                <a href="{% url 'product_detail' product.id %}">
+                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                </a>
+                                {% else %}
+                                <a href="{% url 'product_detail' product.id %}">
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                </a>
+                                {% endif %}
                             </div>
-                            <div class="card-footer pt-0 border-0 text-left">
-                                <div class="row">
-                                    <div class="col">
-                                        <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
-                                        {% if product.category %}
-                                        <p class="small mt-1 mb-0">
-                                            <a href="{% url 'products' %}?category={{ product.category.name }}"
-                                                class="text-muted">
-                                                <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
-                                            </a>
-                                        </p>
-                                        {% endif %}
-                                        {% if product.stock > 0 %}
-                                            <p class="small text-blue">In Stock</p>
-                                        {% else %}
-                                            <p class="small text-danger">Out of Stock</p>
-                                        {% endif %}
-                                        {% if product.average_rating %}
-                                        <small class="text-muted"><i class="fas fa-star mr-1">{{ product.average_rating }} /
-                                                5</i></small>
-                                        {% else %}
-                                        <small class="text-muted">No Rating</small>
-                                        {% endif %}
-                                        {% if request.user.is_superuser %}
-                                            <small class="ml-3">
-                                                <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-                                                <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-                                            </small>
-                                        {% endif %}
-                                    </div>
-                                </div>
+                            <div class="card-footer pt-2 mb-0 border-0 text-center">
+                                <p class="mb-0">{{ product.name }}</p>
+                                <p class="lead mb-0 text-center font-weight-bold">€{{ product.price }}</p>
+                                {% if product.category %}
+                                <p class="small mt-1 mb-0">
+                                    <a href="{% url 'products' %}?category={{ product.category.name }}" class="text-muted">
+                                        <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                    </a>
+                                </p>
+                                {% endif %}
+                                {% if product.stock > 0 %}
+                                    <p class="small text-blue">In Stock</p>
+                                {% else %}
+                                    <p class="small text-danger">Out of Stock</p>
+                                {% endif %}
+                                {% if product.average_rating %}
+                                <small class="text-muted"><i class="fas fa-star mr-1">{{ product.average_rating }} / 5</i></small>
+                                {% else %}
+                                <small class="text-muted">No Rating</small>
+                                {% endif %}
+                                {% if request.user.is_superuser %}
+                                    <small class="ml-3">
+                                        <a href="{% url 'edit_product' product.id %}">Edit</a> | 
+                                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                    </small>
+                                {% endif %}
                             </div>
                         </div>
                     </div>
-
-                    {% if forloop.counter|divisibleby:1 %}
-                        <div class="col-12 d-sm-none mb-5">
-                            <hr>
-                        </div>
-                    {% endif %}
-                    {% if forloop.counter|divisibleby:2 %}
-                        <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
-                            <hr>
-                        </div>
-                    {% endif %}
-                    {% if forloop.counter|divisibleby:3 %}
-                        <div class="col-12 d-none d-lg-block d-xl-none mb-5">
-                            <hr>
-                        </div>
-                    {% endif %}
+            
                     {% if forloop.counter|divisibleby:4 %}
-                        <div class="col-12 d-none d-xl-block mb-5">
+                        <div class="col-12 mb-5">
                             <hr>
                         </div>
                     {% endif %}
                 {% endfor %}
             </div>
+            
         </div>
     </div>
 </div>

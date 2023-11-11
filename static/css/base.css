@@ -82,6 +82,13 @@ input[name='q']::placeholder {
 }
 
 
+/* Product image */
+.product-image {
+    height: 100px;
+    width: 100px;
+}
+
+
 /* Custom Buttons */
 
 .btn {
@@ -311,6 +318,7 @@ a.category-badge>span.badge:hover {
     opacity: 0;
     cursor: pointer;
 }
+
 
 .custom-checkbox .custom-control-label::before {
     border-radius: 0;
