@@ -106,18 +106,18 @@
                         </a>
                     {% else %}
                         <a href="{% url 'reviews:show_review_product' product.id %}"
-                        role="button" class="btn btn-outline-black text-uppercase rounded py-3">Write a customer review
+                        role="button" class="btn btn-outline-black text-uppercase rounded py-3">Write a review
                         </a>
                     {% endif %}
                 {% endif %}
                 {% if request.user.is_authenticated %}
                     {% if user_added_wishlist_product %}
                         <a href="{% url 'wish_list:remove_wishlist_product' product.id %}"
-                        role="button" class="btn btn-outline-black text-uppercase rounded py-3">Remove this product from your wishlist
+                        role="button" class="btn btn-sm btn-outline-black text-uppercase rounded py-3">Remove from wishlist
                         </a>
                     {% else %}
                         <a href="{% url 'wish_list:add_wishlist_product' product.id %}"
-                        role="button" class="btn btn-outline-black text-uppercase rounded py-3">Add this product to your wishlist
+                        role="button" class="btn btn-sm btn-outline-black text-uppercase rounded py-3">Add to wishlist
                         </a>
                     {% endif %}
                 {% endif %}
