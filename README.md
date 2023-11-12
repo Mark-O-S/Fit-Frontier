@@ -4,56 +4,342 @@ Welcome to Fit Frontier. A full stack e-commerce website.
 
 This project is created as part of my fifth and final project for a Diploma in Software Development with [Code Institue](https://codeinstitute.net/ie/).
 
-[View the live project here.](https://codeinstitute.net)
+[View the live project here.](https://fit-frontier-d971762c041b.herokuapp.com/)
 
-<h2 style="text-align: center;"><img src="https://i.ibb.co/TYvTXz1/Example-CI.png"></h2>
+<h2 style="text-align: center;"><img src="media/amiresponsive-img.png"></h2>
 
 # **Table of Contents**
-   - [**User Experience**](#user-experience-ux)
-      - [Site Goals](#site-goals)
-      - [Features](#features)
-   - [**Technologies Used**](#technologies-used)
-   - [**Testing**](#testing)
-   - [**SEO**](#search-engine-optimization-seo--social-media-marketing)
-   - [**Deployment**](#deployment)
-   - [**Credits & Acknowledgements**](#credits)
+- [**User Experience**](#user-experience-ux)
+	- [Overview](#overview)
+	- [Main Site Goals](#main-site-goals)
+	- [User Stories](#user-stories)
+	- [Design]()
+    - [Features](#features)
+	- [Wireframes](#wireframes)
+	- [DB Schema](#database-schema)
+- [**Technologies Used**](#technologies-used)
+- [**Testing**](#testing)
+- [**SEO**](#search-engine-optimization-seo--social-media-marketing)
+- [**Deployment**](#deployment)
+- [**Credits & Acknowledgements**](#credits)
 
 ## User Experience (UX)
 
-### Site Goals
+- ### Business Model
 
- - #### Overview:
+	Fit Frontier is a Business to Business(B2B) & Business to Consumer(B2C) e-commerce site. The site's target audience is to provide high quality gym equipments for anyone looking to get fit; whether it be a business for their fitness facility or for the public to use in their own private gym garage or their home.
+
+- #### Overview:
     Fit Frontier is an e-commerce platform specializing in the sale of gym equipment, including dumbbells, barbells, kettlebells, and weight plates. Our business model caters to both individual consumers (B2C) and businesses (B2B) looking to purchase high-quality fitness equipment. We aim to provide a seamless online shopping experience, offering a wide range of fitness products while prioritizing convenience, affordability, and customer satisfaction.
 
+	<strong>You can test the payment functionality by using the following details in the checkout page: </strong>
+		
+		- Card Number: 4242 4242 4242 4242
+		- Expiry Date: Any future date formatted to MM/YY
+		- CVN: Any 3 digit number
+		- Postal Code: Any 5 digits
+
+- #### Main site Goals
+	- Showcase all available products.
+	- To provide customers with up-to-date information regarding the business through the use of email subscription.
+	- To provide users multiple ways of getting in touch with the business by way of contact number and email address.
+	- To provide users and customers more information about the business by way of social media.
+	- To provide a safe and efficient way to get payment for the site's products.
+	- To provide customers further informations about their orders.
+	- To allow customers to review page.
+	- To allow customers to have a wishlist.
+	- To give users a responsive and easy to navigate website with a clear purpose.
+	- To provide users with products that meet their expectations.
+	- To allow users to view details on products and add them to their shopping basket.
+	- To allow users to checkout swiftly and safely.
+	- To give users the option to save their information for future visits.
+	- To give registered users the ability to view their previous orders.
+	- To give registered users the ability to submit product reviews.
+	- To give registered users the ability to add products to their wishlist.
+
+Back to [top](#table-of-contents)
+
+
 - ### User stories
-   To help with the development of this project, I created user stories to map out tasks I needed to achieve in order to build the website to a good standard.
+   To help with the development of this project, I created user stories to map out tasks I needed to achieve in order to build the website to a good standard:
+
+   - As a site user, I can gain access to the website so that I can learn more about the business and the types of products they sell.
+
+   - As a site user, I can easily navigate around the website.
+
+   - As a site user, I want to be able to find more information about the business, contact the business and/or follow the creator.
+   
+   - As a business owner, add a Call To Action button that is clearly visible on the landing page to encourage site users to access the shop and view/buy products.
+
+   -  As a site user, I can read about the business for more details.
+
+   - As a business owner, include all product categories in the landing page for easier UI/UX and navigation.
+
+   - As a site user, I can register for an account so that I have access to additional features of the website.
+
+   - As a site user, I can check my emails for a confirmation email in order to verify that my registration is successful.
+
+   - As a site user, I can login and logout from my account, so that I can access my account’s information and keep my information secure.
+
+   - As a site user, I can reset my password so that I can regain access to my account if I forget my username and/or password.
+
+   - As a business owner, I can have access to the admin interface to add, update, view and delete products.
+
+   - As a business owner, I can add a product through the store user interface in order to add new items to my store.
+
+   - As a business owner, I can edit/update a product through store user interface.
+
+   - As a Customer, I can view the sites products so that I can make a purchase.
+
+   - As a Customer, I can view individual product descriptions so that I can get more information.
+
+   - As a Customer, I can search for a specific product through the search tab to quickly find a certain product.
+
+   - As a Customer, I can sort products to identify best rated and price ranging from high to low.
+
+   - As a registered user, I can have a personal profile when I'm using the site.
+
+   - As a customer, I can access my basket to review my items before I purchase them.
+
+   - As a customer, I can see the total cost of the products that I have in my basket so that I know how much I am going to be spending.
+
+   - As a Customer, I can update the quantity of each item in my basket, so that I can easily make changes to my order before checkout.
+
+   - As a developer, I can use Stripe to setup a secure payment system to the online shop.
+
+   - As a customer, I can see an order confirmation after checkout so that I can confirm that my order was successful.
+
+   - As a site user, I can sign up to the websites newsletter to can keep updated with the latest news and offers.
+
+- #### View the link below to see the user stories testing:
+
+	[TESTING](TESTING.md)
+
+Agile Methodology was used during the development of this project. Relevant user stories were added to [GitHub Issues](https://github.com/Mark-O-S/Fit-Frontier/issues), labelled with User Story Points and MoSCoW prioritisation.
    
 - ### Design
 
 - #### Colour Scheme
+	[Coolors]( https://coolors.co/) was used to generate a colour palette for the website.
+	![Color scheme](/media/pp5-color-palette.png)
 
+Back to [top](#table-of-contents)
 
+## Wireframes
 
-- #### Typography
+[Balsamiq](https://balsamiq.com/wireframes/) was used to create the wireframes.
+- See below for the following wireframe views:
 
+	[Home page desktop view:](/media/wf-desktop-home.png)
 
+	[Home page mobile view:](/media/wf-mobile-home.png)
 
-- #### Imagery
+	[Products page desktop view:](/media/wf-desktop-products.png)
 
+	[Products page mobile view:](/media/wf-mobile-products.png)
 
-- ### Wireframes
+	[About page  desktop view:](/media/wf-desktop-about.png)
 
+	[About page mobile view:](/media/wf-mobile-about.png)
+
+Back to [top](#table-of-contents)
+
+## Database Schema
+
+[DrawSQL](https://drawsql.app/) was used to create the database schema.
+- See below for the database schema:
+
+	![Database Schema](/media/data-schema.png)
 
 
 Back to [top](#table-of-contents)
 
 ## Features
 
-- Responsive on all device sizes
+### Navbar
 
-- Interactive elements
+The navigation bar is the core navigation for the site. It is present throughout the whole website. There's a slight change between mobile size and desktop, however, all include the same functions.
+
+Desktop:
+
+![Desktop Nav](/media/desktop-nav-bar.png)
+
+When a user is logged in, an whishlist icon is present for users to add product to their personal product wishlist.
+
+![Desktop Nav 1](/media/desktop-navbar.png)
+
+Clicking the Shop button on the navbar opens a drop down where you can browse the following categories:
+ - Dumbbells
+ - Barbells
+ - Kettle Bells
+ - Weight Plates
+ - New
+ - On Sale
+ - All Equipments
+
+![Desktop Nav 2](/media/desktop-navbar-2.png)
+
+Clicking the "My Account" button on the navbar opens a dropdown menu that allows a user to click a link to take them to either the registration or login page.
+
+![Desktop Nav 3](/media/desktop-navbar-3.png)
+
+View if a registered user has an item(s) in their wish list and basket
+
+![Desktop Basket](/media/desktop-nav-basket.png)
+
+Mobile:
+
+![Mobile Nav](/media/mobile-navbar.png)
+![Mobile Nav 2](/media/mobile-navbar-2.png)
+![Mobile Nav 3](/media/mobile-navbar-3.png)
+![Mobile Basket](/media/mobile-navbar-basket.png)
 
 Back to [top](#table-of-contents)
+
+### Footer
+
+The footer section, like the navbar, is present throughout the website. It allows users to subscribe to the company newsletters, provide social links and also contact details.
+
+Desktop:
+
+![Desktop Footer](/media/desktop-footer.png)
+
+Mobile:
+
+![Mobile Footer](/media/mobile-footer.png)
+
+Back to [top](#table-of-contents)
+
+### Home Page
+
+The home page is the first page on which a user lands on. For this reason, it has to have a clearly defined purpose and be easy to navigate. The page will also be used to promote the shop and its products.
+
+To make the site's purpose more apparent, I have included the product categories with images so that the users can visually see that the business sells gym equipments.
+
+Desktop:
+
+![Home Page Hero](/media/desktop-homepage-1.png)
+
+Mobile:
+
+![Mobile Home Page Hero](/media/mobile-homepage-1.png)
+
+![Desktop Home page](/media/desktop-homepage-2.png)
+
+![Mobile Home Page](/media/mobile-homepage-2.png)
+![Mobile Home Page](/media/mobile-homepage-3.png)
+
+Back to [top](#table-of-contents)
+
+### Products Page
+
+The product page is where the user will visit to browse products and add them to the cart. Registered users will also have the option to add products to their wishlist. It is also where users will go when they filter the products by category. The user can navigate between pages using the pagination buttons at the bottom of the page.
+
+On the individual product details, the user can see the product name, price, image, and category. The user can accessing the product details page by clicking on the product card. In the product details page the user can choose quantities and color options where available.
+
+Products page view & Product detail view:
+
+Desktop View
+
+![Desktop Product 1](/media/desktop-product-1.png)
+
+Mobile View on all products page
+
+![Desktop Product Detail](/media/mobile-product-view-1.png)
+
+Mobile View on an individual product
+
+![Mobile Product Detail 1](/media/mobile-product-detail-1.png)
+
+I created a review section underneath the product detail so that users are able to see individual product reviews.
+
+Only registered users will have the option to create a review. Everyone can see a review.
+
+![Desktop Product Review](/media/desktop-product-review-2.png)
+![Desktop Product No Review](/media/desktop-product-review-1.png)
+
+![Mobile Proudct Review](/media/mobile-product-review-1.png)
+![Mobile Proudct No Review](/media/mobile-product-review-2.png)
+
+Back to [top](#table-of-contents)
+
+### User Registration
+
+To register, a user must navigate to the account section on the top right corner of the nav bar and click "My Account". There will be a drop down button to give the user the option to register or login.
+
+When the user clicks register, they will be directed to the sign up page in which email address, username and password will be asked for and required in order to sign up. 
+
+When the user completes this, an email confirmation will be sent to the users email address in which they need to follow in order to complete the sign up process.
+
+![User registration](/media/user-registration.png)
+
+A message will appear requasting the user to check email and follow the link to finalize the signup process.
+![Verify email](/media/verify-email-message.png)
+![Verify email link](/media/verify-email-link-message.png)
+
+The user must then confirm the email address.
+
+![Verify email btn](/media/verify-email-link-btn.png)
+
+Once confirming, a success box will appear on the top right of the screen to inform the user that it is a success.
+
+![Verify email success](/media/verify-email-success.png)
+
+Back to [top](#table-of-contents)
+
+### User profile
+
+Once a user is registered and logged in, they will be able to visit their profile page which can be accessed from the main nav bar.
+
+In their profile, they will be able to add or update their delivery information details and view their order history if they have previously purchased items while logged in.
+
+![Empty info](/media/user-profile-page-info-empty.png)
+![Filled info](/media/user-profile-page-info-filled.png)
+
+View of Order History once they make a purchase.
+
+![Order history](/media/order-history.png)
+
+Back to [top](#table-of-contents)
+
+### Purchasing a product
+
+When a user add's a product into their bag, they will be able to then go to their bag and check out.
+
+![Shopping bag 1](/media/shopping-bag-section-filled.png)
+
+View when an item is successfully added into the bag.
+
+![Added product to car](/media/add-item-to-bag-success.png)
+
+
+After clicking secure checkout, the user is directed to the checkout page where they can finalize delivery information and make a payment
+
+![Checkout section](/media/checkout-section.png)
+
+After confirming checkout process and finalizing payment. The user will be shown if the payment was successful by a message box on the top right, the order receipt will be shown as well as an email confirmation sent to the users email address. 
+
+![checkout success box](/media/checkout-success.png)
+![order receipt email](/media/order-receipt-email.png)
+![order receipt confirmation](/media/order-receipt-confirmation.png)
+
+Back to [top](#table-of-contents)
+
+### Error Page
+
+I have included a custom error 404 page in which if triggered, the user will be directed to this site and have the option to navigate back to the home page if a 404 error occurs. This reduces the risk of a user leaving the site completely due to a bad user experience.
+
+![Error 404](/media/error-404-page.png)
+![Mobile Error 404](/media/mobile-error-404-page.png)
+
+Back to [top](#table-of-contents)
+
+### Future Features
+
+- Features I could I could add or improve on  could be a:
+- Blog section where customers who previously purchased products could create blog posts about their fitness journey or fitness tips etc. Other users would be able to like or comment in these posts.
+- Improve the commenting text box in reviews.
+- Overall add further styling to make the user experience more fun.
 
 ## Technologies Used
 
@@ -73,24 +359,16 @@ Back to [top](#table-of-contents)
 - [Bootstrap](https://getbootstrap.com/) - A Framework for building responsive, mobile-fist sites
 
 Back to [top](#table-of-contents)
-
-## Testing
-
-All testing information can be found in [TESTING.md](TESTING.md).
-
-[Back to Top](#table-of-contents)
-
-### Known Bugs
-
-- In the edit shopping bag page. Updating the quantity of the item above the quantity of 1 works fine, however. I received errors when I try to change the item quantity to zero and remove the item that way.
- 
- 
-The reason for this error was because I wrapped ‘item_id’ in square brackets. I needed to use parentheses to call it, not square brackets.
-
-
-Back to [top](#table-of-contents)
  
 ## Search Engine Optimization (SEO) & Social Media Marketing
+
+### Search Engine Optimisation
+
+Search Engine Optimisation(SEO) is a set of practices designed to improve the appearance and positioning of web pages in organic search results. To improve my website's visibility on search engines, I started by conducting some keyword research and defining short-tail and long-tail keywords.
+
+[Work tracker](https://www.wordtracker.com/) was used to try and narrow the most relevant, these were then included in the website's meta tags.
+
+A [sitemap.xml](https://www.xml-sitemaps.com/) and robots.txt file were added to my project. he sitemap lists all the pages on the website, while the robots.txt file tells search engines which pages they should not crawl.
 
 ### Social Media Marketing
 
@@ -102,6 +380,11 @@ I've created a Facebook business account wich can be acessed **[here](https://ww
 
 Back to [top](#table-of-contents)
 
+## Testing
+
+All testing information can be found in [TESTING.md](TESTING.md).
+
+[Back to Top](#table-of-contents)
 
 ## Deployment
 
@@ -463,34 +746,24 @@ Back to [top](#table-of-contents)
 
 ## Credits
 
-### Code
+- [Code Institute](https://codeinstitute.net/) - For the course material and the slack community for the support throughout. 
 
-- The full-screen hero image code came from this [StackOverflow post](https://stackoverflow.com)
+- Balsamiq was used to create the wireframes.
 
-- [Bootstrap4](https://getbootstrap.com/docs/4.4/getting-started/introduction/): Bootstrap Library used throughout the project mainly to make site responsive using the Bootstrap Grid System.
+- GitHub was used to store my repository.
 
-- [MDN Web Docs](https://developer.mozilla.org/) : For Pattern Validation code. Code was modified to better fit my needs and to match an Irish phone number layout to ensure correct validation. Tutorial Found [Here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/tel#Pattern_validation)
+- [Bootstrap](https://getbootstrap.com/) and [Django](https://docs.djangoproject.com/en/4.2/) used throughout the project.
 
-Back to [top](#table-of-contents)
+- [Stack Overflow](https://stackoverflow.com/) and [W3schools](https://www.w3schools.com/) for aiding me find solutions to issues encountered.
 
-### Content
+- [Google Fonts](https://fonts.google.com/) For using google fonts.
 
-- All content was written by the developer.
+- [XML-Sitemaps](https://www.xml-sitemaps.com/) for creating the sitemap for the root directory of the project.
 
-- Psychological properties of colours text in the README.md was found [here](http://www.colour-affects.co.uk/psychological-properties-of-colours)
+- [tiny png](https://tinypng.com/) for compressing image sizes.
 
-Back to [top](#table-of-contents)
+- [Pexels](https://www.pexels.com/) for allowing me to use free copyright images on the website.
 
-### Media
-
-- All Images were created by the developer.
-
-Back to [top](#table-of-contents)
-
-### Acknowledgements
-
-- My Mentor for continuous helpful feedback.
-
-- Tutor support at Code Institute for their support.
+- [Amazon](www.amazon.co.uk) for the product images.
 
 Back to [top](#table-of-contents)

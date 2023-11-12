@@ -1,4 +1,3 @@
-TESTING.md
 [Back to README](README.md)
 ## User Stories
 <details>
@@ -65,3 +64,69 @@ Test to check that all features and links from across the site are working as ex
 
    </p>
 </details>
+
+
+## Known Bugs
+
+1. In the edit shopping bag page. Updating the quantity of the item above the quantity of 1 works fine, however. I received errors when I try to change the item quantity to zero and remove the item that way.
+
+   ![Bug edit shopping bag](media/bug-updatebagtozeroitems-error.png)
+   ![Bug edit shopping bag code](/media/bug-updatebagtozeroitems-error-code.png)
+
+- The reason for this error was because I wrapped ‘item_id’ in square brackets. I needed to use parentheses to call it, not square brackets.
+
+   ![Bug edit shopping bag fix](/media/bug-updatebagtozeroitems-fix-code.png)
+
+2. In views.py for checkout, when we are checking if the order form is valid, an error was raised since the client secret was None and couldn’t split the value.
+
+   ![Bug order error code](/media/bug-clientsecretmissingfromgetrequestpid-error.png)
+
+   ![Bug order error](media/bug-clientsecretmissingfromgetrequest-error.png)
+
+- The fix for this was add the missing input html tag which passes the client secret in the GET request to the views function.
+
+   ![Bug order error fix](media/bug-clientsecretmissingfromgetrequest-fix-code.png)
+
+3.	When the user searches for a product, the raw Django template variable parser ‘{{ search_term }}’was being displayed instead of the search query value.
+
+   ![Bug search product code](/media/bug-search-term-being-displayed-error-code.png)
+
+   ![Bug search error](/media/bug-search-term-being-displayed-error.png)
+
+- This happened because the prettier auto moved some of the html to the next line including the last two of the braces. This meant the Django template variable wasn’t getting parsed properly and was treated as a text value.
+
+   ![Bug search code fix](/media/bug-search-term-being-displayed-fix-code.png)
+
+4. After deploying the project on Heroku and connected my AWS bucket, static files and media files. When I load up the website, the images were not displaying.
+I was unable to find out what was causing the issue why the deployed site was not displaying images until I checked Django admin and clicked on the link of a product photo and it displayed an error message:
+
+   ![Error xml post deployment 1](/media/bug-media-json-not-working-error-display.png)
+
+- Initially, the key “media/ barbell-metis-7ft-olympic-barbell-20kg_xCHE6az.jpg” did not have “_Xche6Az”. It should have been just 
+“media/ barbell-metis-7ft-olympic-barbell-20kg”. I checked the rest of the images and realised that my media had duplicate copies which had extra letters and digits:
+
+   ![Error xml post delpoyment 2](/media/bug-media-json-not-working-error.png)
+
+- I think that this happened when I dumped my database into a json file, it added extra characters to the img key. I removed the extra characters and 
+removed duplicate files:
+
+   ![Error xml post deployment fix](/media/bug-media-json-not-working-fix.png)
+
+- After doing this the images loaded into the deployed site. I’m still not sure exactly how or why this occurred.
+
+5.	Having issue after setting up real email confirmation with Django:
+![Bug email error 1](/media/bug-email-registration-error.png)
+
+- I set debug mode to true to find more information of the error. Tried to register a new user with email and the following showed up:
+
+   ![Bug email error 2](/media/bug-email-registration-module-error.png)
+
+- I searched to find django.core.mail.backends.smpt and finally realized that there was a typo. It should be django.core.mail.backends.smtp instead.
+
+- I changed the typo:
+
+   ![Bug email error 3](/media/bug-email-registration-code-error.png)
+
+- To correct smtp:
+   
+   ![Bug email code fix](/media/bug-email-registration-code-fix.png)
