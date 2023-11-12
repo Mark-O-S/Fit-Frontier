@@ -33,28 +33,27 @@
                     </div>
                     {% for item in wishlist_products %}
                         <div class="row">
-                            <div class="col-2 mb-1">
-                                <a href="{% url 'product_detail' item.wishlist_product.id %}">
+                            <div class="col-2 mt-2 mb-2">
+                                <a href="{% url 'product_detail' item.wishlist_product.id %}" class="">
                                     {% if item.wishlist_product.image %}
-                                        <img class="w-100" src="{{ item.wishlist_product.image.url }}" alt="{{ wishlist_product.name }}">
+                                        <img class="w-100 border-black shadow-sm" src="{{ item.wishlist_product.image.url }}" alt="{{ wishlist_product.name }}">
                                     {% else %}
-                                        <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ wishlist_product.name }}">
+                                        <img class="w-100  border-black shadow-sm" src="{{ MEDIA_URL }}noimage.png" alt="{{ wishlist_product.name }}">
                                     {% endif %}
                                 </a>
                             </div>
                             <div class="col-7">
-                                <p class="my-0"><strong>{{ item.wishlist_product.name }}</strong></p>
+                                <a class="my-0"><strong>{{ item.wishlist_product.name }}</strong></a>
+                                <p class="my-0 small text-muted">€{{ item.wishlist_product.price}}</p>
+                            </div>
+                            <div class="col-3">
+                                <a href="{% url 'wish_list:remove_product_from_wishlist' item.wishlist_product.id %}"
+                                    class="btn btn-danger btn-sm mt-3">
+                                    <small">Remove</small>
+                                </a>
                             </div>
                         </div>
-                        <div class="col-3 text-right">
-                            <p class="my-0 small text-muted">€{{ item.wishlist_product.price}}</p>
-                        </div>
-                        <div class="col-3 text-right">
-                            <a href="{% url 'wish_list:remove_product_from_wishlist' item.wishlist_product.id %}"
-                                class="btn btn-outline-danger btn-sm">
-                                <small class="ml-3">Delete</small>
-                            </a>
-                        </div>
+                        
                         <hr class="my-0">
                     {% endfor %}
                 </div>
