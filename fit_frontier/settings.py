@@ -29,18 +29,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '8000-mark-o-s-fit-frontier-swjq4ir562.us2.codeanyapp.com',
     'https://fit-frontier-d971762c041b.herokuapp.com/',
     'fit-frontier-d971762c041b.herokuapp.com', 'localhost',
-    '8000-markos-fitfrontier-emcijhe57po.ws-eu104.gitpod.io',
-    '8000-markos-fitfrontier-odtyad4dtcc.ws-eu104.gitpod.io',
-    '8000-markos-fitfrontier-uzmje6e1oma.ws-eu105.gitpod.io',
-    '8000-markos-fitfrontier-uzmje6e1oma.ws-eu106.gitpod.io',
+    '8000-markos-fitfrontier-zdxkcxy65bw.ws-eu106.gitpod.io',
 ]
-
 
 # Application definition
 
