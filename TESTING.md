@@ -114,10 +114,58 @@ Error Page
 </details>
 
 <details>
-   <summary>Page Validation</summary>
-   <p>
+   <summary>Compatibility Test</summary>
 
-   </p>
+   The website was tested on Chrome, Firefox and microsoft edge for compatibility.
+
+| Intended      | Chrome    | Firefox   | Android        |
+|---------------|-----------|-----------|----------------|
+| Appearance    | Good      | Good      | Good           |
+| Responsiveness| Good      | Good      | Good           |
+
+No issues reported as of the time it was tested.
+
+[Back to top](<#top>)
+</details>
+
+<details>
+   <summary>Page Validations</summary>
+
+| Features| Expectation    |Links Active/Features(Desktop)| Links Active/Features (Mobile)|
+|---------|------------    |------------------------------|-------------------------------|
+|HomePage |                |                              |                               |
+|Navbar Logo Link | Link to home page | Pass  | Pass  |
+|Shop Dropdown | Links to all categories visibles and working | Pass | Pass |
+|About Page button | Link to about page visible and working  | Pass | Pass |
+|Account Page button | "My Account" icon is visible on the home navigation page and when clicked, a drop down option to direct user to register or login/logout works | Pass | Pass |
+|Bag page button| Shopping bag icon is visible on the home navigation page on the nav bar and it takes you to your shopping bag page. It also displays total cost of what is in users bag | Pass | Pass |
+|Search bar | Search for products, product category or specific products on the search bar and return result| Pass | Pass |
+| Homepage Hero CTA button| Site call to action button "Shop Now" on the homepage hero image directs users to the products page.| Pass | Pass |
+| Category links on home page| The 6 category displayed in image and buttons: "New in stock", "On sale", "dumbbells", "bar bells", "weight plates", "kettlebells" visible and directs user to each specified page|Pass |Pass |
+|Footer Section | | | |
+| Email subscription|Allows users to input email address to subscribe to newsletters using mailchimp |Pass |Pass |
+| Social Links| Social link to Fit Frontier's facebook page is visible and working. Link to instagram is visible and directs to instagram| Pass| Pass|
+| Contact info and developer info| Contact details are visible, the link to the developers linkedin page is visible and opens in a new tab| Pass| Pass|
+|Products Page | | | |
+| Display all categories| Display all six categories in a single page| Pass| Pass|
+| Display specific categories| Display only specific categories| Pass| Pass|
+| Sort Products| Sort products by price, rating, name or category| Pass| Pass|
+| Product view| On the products page, each products image, name, cost, category, if it's stock or rating is displayed| Pass| Pass|
+| Product Detail Page| | | |
+| Product details| On the specific product detail page, additionally show further description of the item and how many quantity a customer wants to buy| Pass| Pass|
+| Product details add to bag| On the specific product detail page, the customer is able to choose a number of quantity of product and click add to bag to add to their bag| Pass| Pass|
+| Product details review| On the specific product detail page, users are able to see any reviews existing on each individual product. User has an option to  "Keep shopping" by pressing the button. If user is logged in, they are able to create a review or delete their own review| Pass| Pass|
+| Shopping bag| | | |
+| Shopping bag views| Users are able to see what they have in their bag, the grand total. They are able to edit items in their bag if they wish to do so.| Pass| Pass|
+| Shopping bag checkout button| In the bag page, users are able to click "secure checkout" to direct them to the checkout page so that they can securely checkout| Pass| Pass|
+| Checkout Page| User is prompted to fill delivery details, order summary is visible and total cost. User is prompted to fill payment information and click "complete order" to secure payment| Pass| Pass|
+| Checkout success | If checkout details and payment is successful, users are directed to the checkout success page which provides order receipt. Email sent to users email to confirm payment| Pass| Pass|
+| Checkout error| If delivery details are missing, payment information incorrect, notify user to amend| Pass| Pass|
+| Error 404 | | |
+| Error page| If user encounters an error 404, direct them to the error 404 page to notify them of an error.| Pass| Pass|
+| Error page return home button| If a user becomes directed to the error 404 page, provide a button that is easily visible so that they can click to return back to the home page| Pass| Pass|
+
+[Back to top](<#top>)
 </details>
 
 
