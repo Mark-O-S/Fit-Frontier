@@ -36,30 +36,85 @@
 </p>
 </details><br>
 
+[Back to top](<#top>)
+
 ## Validation
-Test to check that all features and links from across the site are working as expected.
+Test to check that features and links are working as expected.
 <details>
-   <summary>MORE</summary>
-   <p>
-   </p>
+   <summary>Lighthouse Validation</summary>
+
+   - Overall, I am happy with the performance of the website according to the Lighthouse tool.
+
+   ![Home page](/media/lighthouse-home-page.png)
+   ![Profile page](/media/lighthouse-profile-page.png)
+   ![Product page](/media/lighthouse-products.png)
+   ![Shopping Bag page](/media/lighthouse-shopping-bag-page.png)
+   ![Wishlist page](/media/lighthouse-wishlist-page.png)
+
+[Back to top](<#top>)
 </details>
 
 <details>
-   <summary>MORE</summary>
-   <p>
+   <summary>HTML Validation</summary>
 
-   </p>
+   HTML was tested by using [W3C HTML Validation tool](https://validator.w3.org/), no errors were found, just warnings.
+
+[W3C Validator](https://validator.w3.org/) was used in testing html.
+
+Home Page
+![Home](/media/html-validator-home-page.png)
+
+About Page
+![About](/media/html-validator-about-page.png)
+
+Products Page
+![Product](/media/html-products-page.png)
+
+Product Detail Page
+![Product Detail](/media/html-products-detail-page.png)
+
+Bag page
+![Bag](/media/html-bag-page.png)
+
+Checkout Page
+![Checkout](/media/html-checkout-page.png)
+
+Checkout Success Page
+![Checkout Success](/media/html-checkout-success-page.png)
+
+Profile Page
+![Profile](/media/html-profile-page.png)
+
+
+Signup Page
+![Signup](/media/html-signup-page.png)
+
+
+Login Page
+![Login](/media/html-login-page.png)
+
+Logout Page
+![Logout](/media/html-logout-page.png)
+
+Error Page
+![Error](/media/html-error-page.png)
+
+
+[Back to top](<#top>)
 </details>
 
 <details>
-   <summary>MORE</summary>
-   <p>
+   <summary>CSS Validation</summary>
+   CSS code was tested by using the [W3C CSS Validation Tool](https://jigsaw.w3.org/css-validator/#validate_by_input). No errors were found.
 
-   </p>
+
+   ![CSS](/media/css-style.png)
+
+[Back to top](<#top>)
 </details>
 
 <details>
-   <summary>MORE</summary>
+   <summary>Page Validation</summary>
    <p>
 
    </p>

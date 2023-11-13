@@ -73,7 +73,7 @@
         <div class="row bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font my-0 text-blue" id="site-name"><em>Fit Frontier</em> </h2>
+                    <h2 class="logo-font my-0 text-blue"><em>Fit Frontier</em> </h2>
                 </a>
             </div>
             <!-- Search Field -->
@@ -96,14 +96,14 @@
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
-                        <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
+                        <a class="text-black nav-link" href="#" id="user-options-desktop" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fas fa-user fa-lg"></i></div>
                                 <p class="my-0">My Account</p>
                             </div>
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                        <div class="dropdown-menu border-0" aria-labelledby="user-options-desktop">
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
                             <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
@@ -151,7 +151,7 @@
         <div class="row bg-white">
             <div class="col-12 text-center d-block d-lg-none">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link mx-auto">
-                    <h2 class="logo-font my-0 text-blue" id="site-name"><em>Fit Frontier</em> </h2>
+                    <h2 class="logo-font my-0 text-blue"><em>Fit Frontier</em> </h2>
                 </a>
             </div>
             <nav class="navbar navbar-expand-lg navbar-light w-100">
